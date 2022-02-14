@@ -1,5 +1,5 @@
 .counter {
-    margin-top: 5rem;
+    margin-top: 3rem;
     color: black;
     font-weight: bolder;
 }
@@ -20,6 +20,7 @@
 .btnBuy {
     font-weight: bolder;
     margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
     padding: 0.2rem 5.6rem;
     background-color: #047ec4;
     border-radius: 1rem;

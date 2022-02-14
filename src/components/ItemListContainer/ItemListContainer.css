@@ -1,3 +1,7 @@
+.ItemListContainer {
+    text-align: center;
+}
+
 .greeting {
     padding-top: 3rem;
     color: #047ec4;
