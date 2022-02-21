@@ -1,17 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Item.css";
-import ItemCount from "../ItemCount/ItemCount";
+
 
 export default function Item({ product }) {
     return (
         <div className="card">
-        <h2>{product.name}</h2>
-        <img src={product.img} alt={product.name} />
-        <div className="card-content">
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-            <ItemCount />
-        </div>
+            <img src={product.img} alt={product.name} />
+            <div className="card-content">
+                <p>{product.description}</p>
+                <p>{product.price}</p>
+
+                <Link to={`/item/${product.id}`}>
+                    <button className="btnAdd2Cart">Add to Cart</button>
+                </Link>
+            </div>
         </div>
     );
 }

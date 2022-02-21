@@ -2,8 +2,60 @@
     text-align: center;
 }
 
-.greeting {
-    padding-top: 3rem;
-    color: #047ec4;
-    font-weight: bolder;
+.category {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
 }
+
+.category .nav-link {
+    color: #ffffff8C;
+    width: 40%;
+    background-color: #00324e;
+}
+
+.category .nav-link:hover {
+    background-color: #0b5783;
+    color: #ffff;
+    box-shadow: 0 0 0.313rem #174e6d, 0 0 1.563rem #047ec4; }
+
+    @media screen and (max-width: 1200px) {
+        .category .nav-link {
+            width: 68%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .category .nav-link {
+            width: 78%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .category .nav-link {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @media screen and (max-width: 620px) {
+        .category .nav-link {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .spinner {
+        margin-top: 21.8rem;
+    }

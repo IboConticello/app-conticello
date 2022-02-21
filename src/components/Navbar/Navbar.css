@@ -1,13 +1,21 @@
 /* NavBar */
 nav .brand-tech {
     color: #047ec4;
-    font-weight: bold
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    height: 0.1rem;
+    padding-bottom: 2.5rem;
 }
 
 nav .nav-link {
     border-radius: 0.5rem; 
     cursor: pointer;
-}    
+    text-transform: capitalize;
+}
     nav .nav-link:hover {
         background-color: #047ec4;
         color: #050801;
@@ -17,16 +25,5 @@ nav .nav-link {
         box-shadow: 0 0.75rem 1rem 0 #036aa5,0 1.063rem 3.125rem 0 #00324e;
         transform: translateY(0.25rem); }
 
-nav form button {
-    text-decoration: none;
-    color: #fff;
-    border-radius: 0.5rem; }
-    nav form button:hover {
-        background-color: #047ec4;
-        color: #fff;
-        box-shadow: 0 0 0.313rem #047ec4, 0 0 1.563rem #047ec4, 0 0 3.125rem #047ec4, 0 0 12.5rem #047ec4; }
-    nav form button:active {
-        background-color: #047ec4;
-        box-shadow: 0 0.75rem 1rem 0 #036aa5,0 1.063rem 3.125rem 0 #00324e;
-        transform: translateY(0.25rem); }
+
 

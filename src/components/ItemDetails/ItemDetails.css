@@ -1,5 +1,11 @@
-.card {
+.itemDetails {
+    height: 30rem;
+    width: 100%;
+}
+
+.card img {
     text-align: center;
+    margin-top: 1rem;
 }
 
 .card .card-content {
@@ -8,17 +14,17 @@
     text-align: center;
 }
 
-.btnAdd2Cart {
+.btnBack {
     font-weight: bolder;
-    text-align: center;
-    margin: 0.2rem 0.1rem 0.4rem 0.1rem;
-    padding: 0.3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.4rem;
+    padding: 0.2rem 4rem;
     background-color: #047ec4;
     border-radius: 1rem;
     border: 1px solid black;
 }
 
-.btnAdd2Cart:hover {
+.btnBack:hover {
     cursor: pointer;
     background-color: #086397;
 }

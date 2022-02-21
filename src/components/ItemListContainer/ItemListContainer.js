@@ -1,37 +1,54 @@
 import { useEffect, useState } from "react";
-import './ItemListContainer.css';
-import ItemCount from '../ItemCount/ItemCount'
-import { getProducts } from '../Products/Products';
+import { getProducts, getProductsByCategory, getCategorias } from "../Products/Products";
 import ItemList from "../ItemList/ItemList";
+import { NavLink, useParams } from "react-router-dom";
+import "./ItemListContainer.css";
 
-
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const onAdd = (count) => {
-        if (count > 0) {
-            console.log(`Added to cart: ${count}!`);
-            alert(`Added to cart: ${count}!`);
-        }
-    };
+    const { categoryId } = useParams();
 
     useEffect(() => {
+        if (categoryId) {
+        setTimeout(() => {
+            getProductsByCategory(categoryId).then((products) => {
+            setProducts(products);
+            setLoading(false);
+            });
+        }, 2000);
+        } else {
         getProducts().then((products) => {
             setProducts(products);
             setLoading(false);
         });
-    }, []);
-    
+        }
+    }, [categoryId]);
 
     return (
-        <div className="ItemListContainer">
-        <h1 className="greeting">{greeting}</h1>
-        <ItemCount stock={13} initial={1} onAdd={onAdd} />
-        <ItemList products={products} />
-        {loading && <p> Loading</p>}
-        </div>
-    )
-}
+        <>
+        {loading ? (
+            <div className="d-flex justify-content-center">
+            <div className="spinner-border text-primary spinner" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+            </div>
+        ) : (
+        <div className="itemListContainer">
+            <div className="category">
+                {getCategorias().map((category) => (
+                <NavLink key={category.id} to={`/products/${category.id}`} className='nav-link'>
+                    {category.description}
+                </NavLink>
+                ))}
+            </div>
 
-export default ItemListContainer
+            <ItemList products={products} />
+            </div>
+        )}
+        </>
+    );
+};
+
+export default ItemListContainer;
