@@ -12,7 +12,7 @@ export default function Item({ product }) {
                 <p>{product.price}</p>
 
                 <Link to={`/item/${product.id}`}>
-                    <button className="btnAdd2Cart">Add to Cart</button>
+                    <button className="btnAdd2Cart">BUY</button>
                 </Link>
             </div>
         </div>

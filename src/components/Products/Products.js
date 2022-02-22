@@ -6,6 +6,7 @@ const products = [
     description: "Cougar Conquer 2 PRO",
     price: "USD 15000",
     category: "PC GAMER",
+    stock: "1"
     },
     {
     id: 1,
@@ -14,6 +15,7 @@ const products = [
     description: "Jonsbo Mod-5",
     price: "USD 12000",
     category: "PC GAMER",
+    stock: "3"
     },
     {
     id: 2,
@@ -22,6 +24,7 @@ const products = [
     description: "Rtx 3090 Xtreme Waterforce",
     price: "USD 5000",
     category: "GPU",
+    stock: "7"
     },
     {
     id: 3,
@@ -30,6 +33,7 @@ const products = [
     description: "Ryzen Threadripper",
     price: "USD 2300",
     category: "CPU",
+    stock: "5"
     },
     {
     id: 4,
@@ -38,6 +42,7 @@ const products = [
     description: "Ram Corsair",
     price: "USD 50",
     category: "RAM",
+    stock: "15"
     },
     {
     id: 5,
@@ -46,6 +51,7 @@ const products = [
     description: "Gabinete Essenses",
     price: "USD 150",
     category: "TOWER",
+    stock: "10"
     },
     {
     id: 6,
@@ -54,6 +60,7 @@ const products = [
     description: "Rtx 3090 Rog Strix",
     price: "USD 4500",
     category: "GPU",
+    stock: "9"
     },
     {
     id: 7,
@@ -62,6 +69,7 @@ const products = [
     description: "NZXT H710i",
     price: "USD 10000",
     category: "PC GAMER",
+    stock: "11"
     },
     {
     id: 8,
@@ -70,6 +78,7 @@ const products = [
     description: "Gabinete Steel Mesh",
     price: "USD 70",
     category: "TOWER",
+    stock: "20"
     },
     {
     id: 9,
@@ -78,6 +87,7 @@ const products = [
     description: "Ram Aourus",
     price: "USD 60",
     category: "RAM",
+    stock: "30"
     },
     {
     id: 10,
@@ -86,6 +96,7 @@ const products = [
     description: "Intel Core i7 Marvel Edition",
     price: "USD 1000",
     category: "CPU",
+    stock: "29"
     },
     {
     id: 11,
@@ -94,6 +105,7 @@ const products = [
     description: "Ryzen 9 3900X",
     price: "USD 1000",
     category: "CPU",
+    stock: "35"
     },
 ];
 

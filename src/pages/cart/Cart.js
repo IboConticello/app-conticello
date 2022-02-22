@@ -1,7 +1,8 @@
 import React from 'react'
+import './Cart.css';
 
 export default function Cart() {
     return (
-        <div>THIS IS MY CART PAGE</div>
+        <div className='cartPage'>THIS IS MY CART PAGE</div>
     )
 }

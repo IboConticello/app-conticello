@@ -7,7 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Pages
-// import Home from './pages/home/Home';
+import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Cart from './pages/cart/Cart';
@@ -21,6 +21,7 @@ function App() {
       <Navbar />
       <main>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/products/" element={<ItemListContainer />} />
           <Route path="/products/:categoryId" element={<ItemListContainer />} />

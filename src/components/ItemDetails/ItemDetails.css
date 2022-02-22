@@ -28,3 +28,19 @@
     cursor: pointer;
     background-color: #086397;
 }
+
+.btnCheckOut {
+    font-weight: bolder;
+    margin-top: 0.1rem;
+    margin-bottom: 0.4rem;
+    margin-right: 0.4rem;
+    padding: 0.2rem 7rem;
+    background-color: #0c86cc;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.btnCheckOut:hover {
+    cursor: pointer;
+    background-color: #54befc;
+}
