@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 
 
-const ItemDetails = ({ product, quantity }) => {
-    const [counter, setCounter] = useState(quantity);
+const ItemDetails = ({ product }) => {
+    const [counter, setCounter] = useState();
 
-    const onAdd = (quantity) => {
-        alert(`Se agregaron ${quantity} "${product.description}" al carrito!`);
-        setCounter(quantity);
+    const onAdd = (count) => {
+        alert(`Se agregaron ${count} "${product.description}" al carrito!`);
+        setCounter(count);
     };
 
     return (
