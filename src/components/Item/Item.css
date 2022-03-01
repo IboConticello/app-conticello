@@ -16,6 +16,7 @@
     background-color: #047ec4;
     border-radius: 1rem;
     border: 1px solid black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.589));
 }
 
 .btnAdd2Cart:hover {
