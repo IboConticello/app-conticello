@@ -1,30 +1,59 @@
 import { useEffect, useState } from "react";
-import { getProducts, getProductsByCategory, getCategorias } from "../Products/Products";
 import ItemList from "../ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
 import "./ItemListContainer.css";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { firestoreDb } from "../../services/firebase/firebase";
+import { useNotificationServices } from '../../services/notification/notificationServices'
+
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [categories, setCategories] = useState([])
 
     const { categoryId } = useParams();
 
+    const setNotification = useNotificationServices()
+
+
     useEffect(() => {
-        if (categoryId) {
-        setTimeout(() => {
-            getProductsByCategory(categoryId).then((products) => {
-            setProducts(products);
-            setLoading(false);
+        setLoading(true);
+
+        const collectionRef = categoryId
+        ? query(
+            collection(firestoreDb, "products"),
+            where("category", "==", categoryId)
+        )
+        : collection(firestoreDb, "products");
+
+        getDocs(collectionRef)
+        .then((response) => {
+            const products = response.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
             });
-        }, 2000);
-        } else {
-        getProducts().then((products) => {
+
             setProducts(products);
-            setLoading(false);
-        });
-        }
+        }).catch((error) => {
+            setNotification('error',`Error buscando productos: ${error}`)
+        }).finally(() => {
+            setLoading(false)
+        })
+
+    return () => {
+        setProducts();
+    };
     }, [categoryId]);
+
+    useEffect(() => {
+        getDocs(collection(firestoreDb, 'categories')).then(response => {
+            const categories = response.docs.map(cat => {
+            return { id: cat.id, ...cat.data()}
+            })
+            setCategories(categories)
+        })
+    }, [])
+
 
     return (
         <>
@@ -37,9 +66,9 @@ const ItemListContainer = () => {
         ) : (
         <div className="itemListContainer">
             <div className="category">
-                {getCategorias().map((category) => (
-                <NavLink key={category.id} to={`/products/${category.id}`} className='nav-link'>
-                    {category.description}
+                {categories.map((cat) => (
+                <NavLink key={cat.id} to={`/products/${cat.id}`} className='nav-link'>
+                    {cat.description}
                 </NavLink>
                 ))}
             </div>

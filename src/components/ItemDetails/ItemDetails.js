@@ -4,17 +4,19 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
-
+import { useNotificationServices } from "../../services/notification/notificationServices";
 
 const ItemDetails = ({ product }) => {
     const [counter, setCounter] = useState(0);
 
     const { addItem } = useContext(CartContext);
 
+    const setNotification = useNotificationServices();
+
     const onAdd = (count) => {
         setCounter(count);
         addItem(product, count)
-        console.log(product)
+        setNotification("Success");
     };
 
 

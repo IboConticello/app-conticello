@@ -1,7 +1,7 @@
 import './CartWidget.css';
 import { BsCart3 } from "react-icons/bs";
 import CartContext from "../../context/CartContext";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 
 const CartWidget = () => {
     const { cart, getQuantityTotal } = useContext(CartContext);

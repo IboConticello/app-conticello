@@ -8,6 +8,9 @@ import { CartContext } from "./context/CartContext";
 // React Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Notif
+import { NotificationServicesProvider } from "./services/notification/notificationServices";
+
 //Pages
 import Home from './pages/home/Home';
 import About from './pages/about/About';
@@ -23,24 +26,26 @@ export const MyContext = React.createContext();
 // App
 function App() {
   return (
-    <CartContext>
-      <BrowserRouter>
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/products/" element={<ItemListContainer />} />
-            <Route path="/products/:categoryId" element={<ItemListContainer />} />
-            <Route path="/item/:id" element={<ItemDetailContainer />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
-    </CartContext>
+    <NotificationServicesProvider>
+      <CartContext>
+        <BrowserRouter>
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/products/" element={<ItemListContainer />} />
+              <Route path="/products/:categoryId" element={<ItemListContainer />} />
+              <Route path="/item/:id" element={<ItemDetailContainer />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="cart" element={<Cart />} />
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+          </main>
+        </BrowserRouter>
+      </CartContext>
+    </NotificationServicesProvider>
   );
 }
 
