@@ -26,7 +26,7 @@ const ItemDetails = ({ product }) => {
             <img src={product.img} alt={product.name} />
             <div className="card-content">
                 <p>{product.description}</p>
-                <p>{product.price}</p>
+                <p>{product.price} USD</p>
 
                 {counter ? (
                     <Link to="/cart">

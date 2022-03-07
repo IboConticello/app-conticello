@@ -9,7 +9,7 @@ export default function Item({ product }) {
             <img src={product.img} alt={product.name} />
             <div className="card-content">
                 <p>{product.description}</p>
-                <p>{product.price}</p>
+                <p>{product.price} USD</p>
 
                 <Link to={`/item/${product.id}`}>
                     <button className="btnAdd2Cart">BUY</button>

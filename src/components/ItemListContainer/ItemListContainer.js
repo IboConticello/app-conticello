@@ -67,11 +67,14 @@ const ItemListContainer = () => {
         <div className="itemListContainer">
             <div className="category">
                 {categories.map((cat) => (
-                <NavLink key={cat.id} to={`/products/${cat.id}`} className='nav-link'>
-                    {cat.description}
-                </NavLink>
+                    <NavLink
+                        key={cat.id}
+                        to={`/category/${cat.id}`}
+                        className="nav-link">
+                        {cat.description}
+                    </NavLink>
                 ))}
-            </div>
+        </div>
 
             <ItemList products={products} />
             </div>
