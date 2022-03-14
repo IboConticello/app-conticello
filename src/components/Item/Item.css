@@ -1,5 +1,7 @@
 .card {
     text-align: center;
+    border: 2px inset #047ec4;
+    border-radius: 2rem;
 }
 
 .card .card-content {

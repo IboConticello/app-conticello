@@ -4,6 +4,7 @@ import ItemDetails from "../ItemDetails/ItemDetails";
 import "./ItemDetailContainer.css";
 import { getDoc, doc } from "firebase/firestore";
 import { firestoreDb } from "../../services/firebase/firebase";
+import { useNotificationServices } from '../../services/notification/notificationServices'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
@@ -12,6 +13,8 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams();
 
+    const setNotification = useNotificationServices()
+
     useEffect(() => {
         setLoading(true);
         getDoc(doc(firestoreDb, `products/${id}`))
@@ -19,6 +22,9 @@ const ItemDetailContainer = () => {
             const product = { id: response.id, ...response.data() };
             setProduct(product);
             })
+            .catch((error) => {
+                setNotification('error',`Error buscando producto: ${error}`)
+            }) 
             .finally(() => {
             setLoading(false);
             setShowDetails(true);

@@ -36,10 +36,13 @@ const ItemDetails = ({ product }) => {
                 <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
                 )}
 
+            <div>
                 <Link to="/products">
                     <button className="btnBack">Back</button>
                 </Link>
-                </div>
+            </div>
+
+            </div>
             </div>
         </div>
     );

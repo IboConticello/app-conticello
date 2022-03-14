@@ -1,26 +1,13 @@
 import { createContext, useState, useContext } from "react";
+import "./notificationServices"
 
-const Notification = ({ message = "Test", severity }) => {
-  // Styles
-    const notificationStyles = {
-        position: "absolute",
-        top: "5px",
-        right: "5px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "auto",
-        height: "auto",
-        backgroundColor: severity === "success" ? "#4CAF50" : "#F44336",
-        padding: "0.6rem 1.2rem",
-        borderRadius: "0.5rem",
-    };
+const Notification = ({ message }) => {
 
     if (message === "") {
         return null;
     }
 
-    return <div style={notificationStyles} >{message}</div>;
+    return <div className="notificationStyles">{message}</div>;
 };
 
 const NotificationContext = createContext();
@@ -34,7 +21,7 @@ export const NotificationServicesProvider = ({ children }) => {
         setSeverity(severity);
         setTimeout(() => {
         setMessage("");
-        }, 3000);
+        }, 5000);
     };
 
     return (

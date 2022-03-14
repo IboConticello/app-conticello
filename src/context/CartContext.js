@@ -52,12 +52,24 @@ export function CartContext({ children }) {
         }, 0);
     };
 
+    const removeQuantity = (item) => {
+        let newCart = cart.map((p) => {
+            if (p.item.id === item.item.id) {
+                p.quantity -= 1;
+                return p;
+            }
+            return p;
+        });
+        setCart(newCart);
+    };
+
     return (
         <Context.Provider
         value={{
             cart,
             addItem,
             removeItem,
+            removeQuantity,
             clear,
             getTotalPrice,
             getQuantityTotal,

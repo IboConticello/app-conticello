@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
             setProducts(products);
         }).catch((error) => {
-            setNotification('error',`Error buscando productos: ${error}`)
+            console.log("error", `Error buscando productos: ${error}`);
         }).finally(() => {
             setLoading(false)
         })
@@ -69,7 +69,7 @@ const ItemListContainer = () => {
                 {categories.map((cat) => (
                     <NavLink
                         key={cat.id}
-                        to={`/category/${cat.id}`}
+                        to={`/products/${cat.id}`}
                         className="nav-link">
                         {cat.description}
                     </NavLink>

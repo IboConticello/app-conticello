@@ -6,6 +6,7 @@ export default function Contact() {
         <div class="container">
     <div class="row g-0 justify-content-sm-center">
         <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100">
+            <h2 className='contactComingsoon'>Out of Service - COMING SOON</h2>
             <section class="container__contact">
                 <div class="background">
                 <div class="container-contact">

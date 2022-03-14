@@ -3,6 +3,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
+.contactComingsoon {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2rem;
+    color: #047ec4;
+    font-size: 3rem;
+    background-color: #212529;
+    border-radius: 2rem;
+}
+
 .container-contact {
     flex: 1 1 300px;
     padding: 3rem; }

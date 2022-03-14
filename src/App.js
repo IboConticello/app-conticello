@@ -16,7 +16,6 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Cart from './pages/cart/Cart';
-import Footer from './components/Footer/Footer';
 import Error404 from './pages/error404/Error404';
 
 // Context
@@ -49,6 +48,5 @@ function App() {
   );
 }
 
-// BAJO DEL MAIN RETIRE EL FOOTER DEBIDO A QUE NO SE QUEDA CON LA PROPIEDAD CSS FIXED Y BLOQUEA LA VISIBILIDAD DE ALGUNOS PRODUCTOS - PREGUNTAR SOLUCION
 
 export default App;
