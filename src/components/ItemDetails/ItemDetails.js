@@ -16,7 +16,7 @@ const ItemDetails = ({ product }) => {
     const onAdd = (count) => {
         setCounter(count);
         addItem(product, count)
-        setNotification("Success");
+        setNotification("Items Added");
     };
 
 

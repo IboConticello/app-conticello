@@ -59,14 +59,10 @@ export default function Cart() {
                         batch.commit().then(() => {
                             clear();
                             setNotification(
-                                "success",
-                                `Thank you! Your purcharse ID is: ${id}`
+                                `Thank you! Your purcharse ID is: ${id}, No worries, you'll receive all the information by email`
                             );
                         setOrderFinished(true);
                         });
-                    })
-                    .catch((error) => {
-                        setNotification("error", error);
                     })
                     .finally(() => {
                         setProcessingOrder(false);
@@ -74,8 +70,7 @@ export default function Cart() {
                 } else {
                     outOfStock.forEach((prod) => {
                         setNotification(
-                            "error",
-                            `${prod} hasn't stock, please check tomorrow!`
+                            `Sorry!! We've no stock right now, please check tomorrow!`
                         );
                         removeItem(prod);
                     });
@@ -105,7 +100,6 @@ export default function Cart() {
             });
         } else {
             setNotification(
-                "error",
                 "Please complete the contact form to continue"
             );
         }
@@ -133,7 +127,7 @@ export default function Cart() {
         } else if (orderFinished === true) {
             return (
             <div>
-                <h2 className="cart-title">Thanks for your purcharse!</h2>
+                <h2 className="cart-title">Thanks for your purcharse! Hope see you soon!</h2>
                 <div className="containerPurchaseBtn">
                     <NavLink to="/"><button className="btnBackHome">Back Home</button></NavLink>
                 </div>

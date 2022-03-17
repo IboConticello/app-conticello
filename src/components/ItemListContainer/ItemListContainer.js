@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
             setProducts(products);
         }).catch((error) => {
-            console.log("error", `Error buscando productos: ${error}`);
+            setNotification(`Error buscando productos: ${error}`);
         }).finally(() => {
             setLoading(false)
         })

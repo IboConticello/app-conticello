@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
             setProduct(product);
             })
             .catch((error) => {
-                setNotification('error',`Error buscando producto: ${error}`)
+                setNotification(`Error buscando producto: ${error}`)
             }) 
             .finally(() => {
             setLoading(false);

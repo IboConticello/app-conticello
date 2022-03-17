@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import "./notificationServices"
+import "./notificationServices.css"
 
 const Notification = ({ message }) => {
 
@@ -16,7 +16,7 @@ export const NotificationServicesProvider = ({ children }) => {
     const [message, setMessage] = useState("");
     const [severity, setSeverity] = useState("");
 
-    const setNotification = (severity, message) => {
+    const setNotification = (message) => {
         setMessage(message);
         setSeverity(severity);
         setTimeout(() => {
