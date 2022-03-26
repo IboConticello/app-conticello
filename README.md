@@ -6,7 +6,7 @@
 
 It's an Tech Ecommerce built with React Js, React Routers, React Hooks and is the final project that I prepared to [CoderHouse](https://www.coderhouse.com)
 
-![Demo](https://https://github.com/IboConticello/app-conticello/Ware-Tech.gif)
+![Demo](https://github.com/IboConticello/app-conticello/blob/main/Ware-Tech.gif)
 
 ## Tech Stack & Deps Used
 
