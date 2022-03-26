@@ -1,11 +1,12 @@
 # **Tecno-Store**
-# *Curso React JS [CoderHouse](https://www.coderhouse.com)*
+
+## *Curso React JS [CoderHouse](https://www.coderhouse.com)*
 
 # Project Information
 
 It's an Tech Ecommerce built with React Js, React Routers, React Hooks and is the final project that I prepared to [CoderHouse](https://www.coderhouse.com)
 
-![Demo](https://https://github.com/IboConticello/app-conticello/blob/main/Ware-Tech.gif)
+![Demo](https://https://github.com/IboConticello/app-conticello/Ware-Tech.gif)
 
 ## Tech Stack & Deps Used
 
@@ -14,9 +15,9 @@ It's an Tech Ecommerce built with React Js, React Routers, React Hooks and is th
 - React Icons
 - React Routers
 - FireBase
-- JS
+- JavaScript
 - CSS
-- BOOTSTRAP
+- BootStrap
 
 ## Getting Started with Create React App
 
