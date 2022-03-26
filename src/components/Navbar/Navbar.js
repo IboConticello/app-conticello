@@ -10,7 +10,7 @@ const Navbar = () => {
         { name: "SHOP", path: "/products" },
         { name: "ABOUT", path: "/about" },
         { name: "CONTACT", path: "/contact" },
-        { name: "ERROR", path: "/*" }, // Se coloca en el NAV solo para visualizarlo, luego retirar.
+        { name: "ERROR", path: "/*" },
     ];
 
     return (

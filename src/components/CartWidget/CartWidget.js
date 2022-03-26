@@ -17,6 +17,4 @@ const CartWidget = () => {
     );
 };
 
-// Falta arreglar el cartBadge, que pasea por el nav en distintas resoluciones
-
 export default CartWidget

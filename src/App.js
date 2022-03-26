@@ -8,7 +8,7 @@ import { CartContext } from "./context/CartContext";
 // React Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Notif
+// Notifications
 import { NotificationServicesProvider } from "./services/notification/notificationServices";
 
 //Pages
